@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="sv-bg" cx="50%" cy="38%" r="68%">
+      <stop offset="0%" stop-color="#252933"/>
+      <stop offset="100%" stop-color="#0F1115"/>
+    </radialGradient>
+    <linearGradient id="sv-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8C06A"/>
+      <stop offset="50%" stop-color="#C89B3C"/>
+      <stop offset="100%" stop-color="#A07828"/>
+    </linearGradient>
+    <linearGradient id="sv-horse" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8A6A4A"/>
+      <stop offset="100%" stop-color="#4A3626"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="60" cy="60" r="58" fill="url(#sv-bg)" stroke="url(#sv-gold)" stroke-width="2.5"/>
+  <circle cx="60" cy="60" r="50" fill="none" stroke="#C89B3C" stroke-width="1" stroke-dasharray="2 4" opacity="0.5"/>
+
+  <!-- at başı silueti -->
+  <path d="M46 82c-2-10 1-18 6-24-3-6-3-12 2-17 3.4-3.4 8-4.4 11.6-2.6 2 1 3 2.6 3.4 4.6 4-1 8 .4 9.6 4 1.6 3.6.4 7-2 9.4 2.6 2.4 4 5.8 4 9.6v16z"
+        fill="url(#sv-horse)" stroke="#2E2115" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M63 41c3-3 7-3 9.4-.4" fill="none" stroke="#2E2115" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="70" cy="46" r="1.6" fill="#F5EBD7"/>
+  <path d="M52 46c-3 2-3 6 0 9" fill="none" stroke="#2E2115" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- yele -->
+  <path d="M56 40c-2 4-2 8 0 12-3 1-5 4-5 8" fill="none" stroke="url(#sv-gold)" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- mızrak -->
+  <path d="M30 90 L86 34" stroke="#6E5217" stroke-width="3" stroke-linecap="round"/>
+  <path d="M30 90 L86 34" stroke="url(#sv-gold)" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M82 30 L92 24 L86 34 Z" fill="#DCE3EA" stroke="#3A414A" stroke-width="1"/>
+  <path d="M36 84 l-6 6 M40 80 l-4 4" stroke="#B8423C" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+
+  <path d="M60 90a7 7 0 1 0 0.1 0" fill="none" stroke="#F5EBD7" stroke-width="1.5" stroke-dasharray="13 100" stroke-linecap="round" transform="rotate(20 60 90)" opacity="0.85"/>
+
+  <text x="60" y="107" text-anchor="middle" font-family="Georgia, serif" font-size="10.5" fill="#C89B3C" letter-spacing="2">SÜVARİ</text>
+</svg>

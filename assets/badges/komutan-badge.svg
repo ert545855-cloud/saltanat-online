@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="km-bg" cx="50%" cy="38%" r="68%">
+      <stop offset="0%" stop-color="#252933"/>
+      <stop offset="100%" stop-color="#0F1115"/>
+    </radialGradient>
+    <linearGradient id="km-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8C06A"/>
+      <stop offset="50%" stop-color="#C89B3C"/>
+      <stop offset="100%" stop-color="#A07828"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="60" cy="60" r="58" fill="url(#km-bg)" stroke="url(#km-gold)" stroke-width="2.5"/>
+  <circle cx="60" cy="60" r="50" fill="none" stroke="#C89B3C" stroke-width="1" stroke-dasharray="2 4" opacity="0.5"/>
+
+  <!-- 8 köşeli tuğra yıldızı -->
+  <g stroke="#8A661F" stroke-width="1" stroke-linejoin="round">
+    <path d="M60 26 L67 46 L88 40 L72 55 L92 60 L72 65 L88 80 L67 74 L60 94 L53 74 L32 80 L48 65 L28 60 L48 55 L32 40 L53 46 Z"
+          fill="url(#km-gold)"/>
+  </g>
+  <circle cx="60" cy="60" r="16" fill="#0F1115" stroke="url(#km-gold)" stroke-width="1.6"/>
+
+  <!-- hilal + yıldız -->
+  <path d="M60 51a9 9 0 1 0 0.1 0" fill="none" stroke="#F5EBD7" stroke-width="2.2" stroke-dasharray="17 100" stroke-linecap="round" transform="rotate(30 60 60)"/>
+  <path d="M66 58l1.3 2.6 2.9.4-2.1 2 .5 2.9-2.6-1.4-2.6 1.4.5-2.9-2.1-2 2.9-.4z" fill="#F5EBD7"/>
+
+  <text x="60" y="107" text-anchor="middle" font-family="Georgia, serif" font-size="9.5" fill="#C89B3C" letter-spacing="1.5">KOMUTAN</text>
+</svg>
