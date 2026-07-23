@@ -8,20 +8,10 @@ const {
 // SVG ICON COMPONENT
 // ═══════════════════════════════════════════════════════
 // ── Ravenmore Icon Pack — PNG ikonları (64×64) ─────────────────────────────
-// ── FİGMA'DAN GELECEK ÖZEL İKON SETİ — "Ottoman AAA" tasarım diline uygun ──
-// assets/nav-icons/<key>.svg olarak bu isimlerle export edip bırakmanız yeterli;
-// SvgIcon bileşeni bunları otomatik kullanır (bulamazsa eski ikona düşer).
-const NAV_ICON_SRC = {
-  money:'/assets/nav-icons/money.svg', bank:'/assets/nav-icons/bank.svg', government:'/assets/nav-icons/government.svg',
-  user:'/assets/nav-icons/user.svg', users:'/assets/nav-icons/users.svg', chat:'/assets/nav-icons/chat.svg',
-  briefcase:'/assets/nav-icons/briefcase.svg', settings:'/assets/nav-icons/settings.svg', crown:'/assets/nav-icons/crown.svg',
-  vote:'/assets/nav-icons/vote.svg', law:'/assets/nav-icons/law.svg', chart:'/assets/nav-icons/chart.svg',
-  weapon:'/assets/nav-icons/weapon.svg', map:'/assets/nav-icons/map.svg', education:'/assets/nav-icons/education.svg',
-  truck:'/assets/nav-icons/truck.svg', factory:'/assets/nav-icons/factory.svg', farm:'/assets/nav-icons/farm.svg',
-  home:'/assets/nav-icons/home.svg', mining:'/assets/nav-icons/mining.svg', newspaper:'/assets/nav-icons/newspaper.svg',
-  scroll:'/assets/nav-icons/scroll.svg', shield:'/assets/nav-icons/shield.svg', sword:'/assets/nav-icons/sword.svg',
-  tasks:'/assets/nav-icons/tasks.svg', throne:'/assets/nav-icons/throne.svg', trophy:'/assets/nav-icons/trophy.svg',
-};
+// ── Figma'dan özel nav ikonu seti geldiğinde: assets/nav-icons/<key>.svg
+// olarak ekleyip SvgIcon'a bir "customSrc" onError-fallback katmanı
+// eklenecek. Dosyalar henüz yokken bu katman aktifti ve TÜM nav ikonlarının
+// önce başarısız bir istek atmasına neden oluyordu — bu yüzden kaldırıldı.
 
 const _ICON_MAP = {
   // Ekonomi & Kaynak
@@ -101,16 +91,6 @@ const _ICON_MAP = {
 function SvgIcon({ name, size=24, style={} }) {
   const src = _ICON_MAP[name];
   if (!src) return null;
-  const customSrc = NAV_ICON_SRC[name];
-  if (customSrc) {
-    // Özel (Figma) ikon varsa onu göster; yüklenemezse (henüz eklenmediyse)
-    // otomatik olarak eski Ravenmore ikonuna düşer — kod değişikliği gerekmez.
-    return React.createElement('img', {
-      src: customSrc, alt: name, width: size, height: size,
-      style: { display:'inline-block', flexShrink:0, ...style },
-      onError: (e) => { e.target.onerror = null; e.target.src = src; e.target.style.imageRendering = 'pixelated'; },
-    });
-  }
   // Ravenmore PNGs — renkli ikonlar, filter gereksiz
   return React.createElement('img', {
     src, alt:name, width:size, height:size,
