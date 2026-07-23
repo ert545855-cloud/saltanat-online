@@ -62,6 +62,7 @@ const _ICON_MAP = {
   tasks:            '/icons/64/scroll.png',
   // Başarı & Ödül
   trophy:           '/icons/64/gemRed.png',
+  'medal-tiers':    '/icons/64/gemRed.png',
   // Harita & Keşif
   map:              '/icons/64/map.png',
   farm:             '/icons/64/tools.png',
